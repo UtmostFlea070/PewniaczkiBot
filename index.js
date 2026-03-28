@@ -9,7 +9,7 @@ const client = new Client({
 });
 
 // ======= USTAWIENIA =======
-const TOKEN = 'MTQ4NzQ0NTY1NjU4MTk2NzkwMg.GJBD-b.RKgpEfNewd3HO3zKcaF7b0qwpOg9yaAzrlBpjs';
+const TOKEN = process.env.TOKEN;
 const GENERAL_CHANNEL_ID = '1487519239073042472';
 
 // kanały, które mają wywoływać alert
