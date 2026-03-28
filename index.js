@@ -47,7 +47,7 @@ client.on('messageCreate', async (message) => {
     const link = `https://discord.com/channels/${message.guild.id}/${message.channel.id}/${message.id}`;
 
     await generalChannel.send(
-      `🔥 **Nowy TYP na #${channelName}**\n` +
+      `🔥 **Nowy PEWNIACZEK na #${channelName}**\n` +
       `👤 Pan Typer: ${message.member ? message.member.displayName : message.author.username}\n` +
       `🎯 Kanał: ${link}`
     );
