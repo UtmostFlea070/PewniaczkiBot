@@ -9,17 +9,23 @@ const client = new Client({
 });
 
 // ======= USTAWIENIA =======
-const TOKEN = 'MTQ4NzQ0NTY1NjU4MTk2NzkwMg.GlmFYk.QU59O6xBTLkpGhJ02TTpf73vzjkPrbjNPSQ0dA';
-const GENERAL_CHANNEL_ID = '795381148209381407';
+const TOKEN = 'MTQ4NzQ0NTY1NjU4MTk2NzkwMg.GJBD-b.RKgpEfNewd3HO3zKcaF7b0qwpOg9yaAzrlBpjs';
+const GENERAL_CHANNEL_ID = '1487519239073042472';
 
 // kanały, które mają wywoływać alert
 const sportChannels = {
-  'dada': true,
-  'ac': true
+  'tenis': true,
+  'kosz': true,
+  'dart': true,
+  'handball': true,
+  'hokej': true,
+  'siata': true,
+  'cs': true,
+  'pilkarzyki': true
 };
 
 // prefix, który ma wywoływać alert
-const TRIGGER = '[TYP]';
+const TRIGGER = 'PEWNIACZEK';
 // ==========================
 
 client.once('ready', () => {
@@ -42,8 +48,8 @@ client.on('messageCreate', async (message) => {
 
     await generalChannel.send(
       `🔥 **Nowy TYP na #${channelName}**\n` +
-      `👤 Autor: ${message.author.username}\n` +
-      `🔗 Sprawdź: ${link}`
+      `👤 Pan Typer: ${message.member ? message.member.displayName : message.author.username}\n` +
+      `🎯 Kanał: ${link}`
     );
   } catch (error) {
     console.error('Błąd przy wysyłaniu alertu:', error);
