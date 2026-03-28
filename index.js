@@ -9,7 +9,7 @@ const client = new Client({
 });
 
 // ======= USTAWIENIA =======
-const TOKEN = 'MTQ4NzQ0NTY1NjU4MTk2NzkwMg.Gun0-Q.XfDe_94hFN6a74TWDxs9wATEXb5c75GMSWffCw';
+const TOKEN = 'MTQ4NzQ0NTY1NjU4MTk2NzkwMg.GlmFYk.QU59O6xBTLkpGhJ02TTpf73vzjkPrbjNPSQ0dA';
 const GENERAL_CHANNEL_ID = '795381148209381407';
 
 // kanały, które mają wywoływać alert
@@ -42,7 +42,7 @@ client.on('messageCreate', async (message) => {
 
     await generalChannel.send(
       `🔥 **Nowy TYP na #${channelName}**\n` +
-      `👤 Autor: ${message.author.nickname}\n` +
+      `👤 Autor: ${message.author.username}\n` +
       `🔗 Sprawdź: ${link}`
     );
   } catch (error) {
